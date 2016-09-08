@@ -73,7 +73,7 @@ class AdvertisementSerializer < ActiveModel::Serializer
         id: 1,
         name: "name",
         profile_image: {
-          url: "https://avatars1.githubusercontent.com/u/210477?v=3&s=460"
+          url: "http://stash.classting.net/users/skswhwo/avatar.png"
         },
         created_at: "2016-09-05T23:25:03.000+09:00",
         updated_at: "2016-09-05T23:25:03.000+09:00"
