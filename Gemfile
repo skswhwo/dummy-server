@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
+# ENV config
+# ----------
 gem 'figaro'
+
+# JSON Serialization
+# ------------------
+gem 'active_model_serializers', '~> 0.9.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -24,6 +30,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'mysql2'
 gem 'sqlite3'
+
+gem 'has_scope'
+
+# DB bootstraping
+# ---------------
+gem 'seedbank'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
