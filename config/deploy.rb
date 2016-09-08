@@ -54,6 +54,16 @@ namespace :deploy do
     end
   end
 
+  task :seed do
+    on roles(:db), in: :groups, limit: 3, wait: 10 do
+      within release_path do
+        with rails_env: fetch(:rails_evn) do
+          execute :rake, "db:seed"
+        end
+      end
+    end
+  end
+
   task :reset_db do
     on roles(:db), in: :groups, limit: 3, wait: 10 do
       within release_path do
@@ -61,6 +71,7 @@ namespace :deploy do
           execute :rake, "db:drop"
           execute :rake, "db:create"
           execute :rake, "db:migrate"
+          execute :rake, "db:seed"
         end
       end
     end

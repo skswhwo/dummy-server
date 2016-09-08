@@ -33,7 +33,7 @@ Advertisement.create(
     title:              'sample title3',
     description:        'sample description3',
     channel:            'mobile',
-    view_template:      'post',
+    view_template:      'banner',
     expose_view:        'noticeboard',
     expose_position:    1,
     audience_roles:     'student,parent',
