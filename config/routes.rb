@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :push do
+
+  end
+
   resources :receipts do
   end
 
