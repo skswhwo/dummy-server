@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'itunes-receipt'
+
 # ENV config
 # ----------
 gem 'figaro'

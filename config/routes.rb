@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :advertisements do
+  resources :receipts do
+  end
 
+  resources :advertisements do
   end
 
 # The priority is based upon order of creation: first created -> highest priority.
