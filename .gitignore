@@ -34,7 +34,7 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
-/linked_files/*
+/config/*.pem
 
 # Ignore swp file
 *.swp

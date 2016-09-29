@@ -46,6 +46,6 @@ class PushController < ApplicationController
   end
 
   def set_cert_path (file)
-      @apn.certificate ||= File.read(Rails.root.join('linked_files',file))
+      @apn.certificate ||= File.read(Rails.root.join('config',file))
   end
 end
