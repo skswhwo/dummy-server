@@ -7,20 +7,23 @@ class PushController < ApplicationController
     sound       = params[:sound];
     development = params[:development]
     service     = params[:service]
+    data        = params[:data]
   
-    if development
+    if development == "1" 
       set_dev_apn (service)
     else
       set_pro_apn (service)
     end
+
+    Notification.new()
 
     notification          = Houston::Notification.new(device: token)
     notification.alert    = message
     notification.badge    = badge
     notification.sound    = sound
     notification.category = "view"
-    #notification.content_available = true
-    #notification.custom_data = {foo: "bar"}
+    notification.content_available = true
+    notification.custom_data = {data: data}
     @apn.push(notification)
     head :ok
   end
