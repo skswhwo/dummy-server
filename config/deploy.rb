@@ -33,7 +33,7 @@ set :format, :airbrussh
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
-append :linked_files, 'config/application.yml', 'config/lc-dev.pem'
+append :linked_files, 'config/application.yml', 'config/lc-dev.pem', 'config/lc-pro.pem', 'config/classting-dev.pem', 'config/classting-pro.pem', 'tmp/restart.txt'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'

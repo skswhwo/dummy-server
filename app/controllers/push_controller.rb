@@ -8,7 +8,7 @@ class PushController < ApplicationController
     development = params[:development]
     service     = params[:service]
   
-    if development == true
+    if development
       set_dev_apn (service)
     else
       set_pro_apn (service)
